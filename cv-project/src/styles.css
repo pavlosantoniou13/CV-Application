@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+}
+
+/* base styles */
+* {
+  margin: 0;
+  font-family: "Quicksand";
+  color: #333;
+}
+.navbar {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  max-width: 600px;
+  margin: 0 auto;
+  border-bottom: 1px solid #f2f2f2;
+}
+.navbar h1 {
+  color: #f1356d;
+}
+.navbar .links {
+  margin-left: auto;
+}
+.navbar a {
+  margin-left: 16px;
+  text-decoration: none;
+  padding: 6px;
+}
+.navbar a:hover {
+  color: #f1356d;
+}
+
+.form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.upper,
+.lower {
+    display: flex;
+    gap: 3vw;
+
+}
+
+.firstName,
+.lastName,
+.phone,
+.email,
+.schoolName,
+.titleOfStudy,
+.from,
+.to,
+.company,
+.position {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.btnContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+input {
+    width: 158px;
+    height: 16px;
+}
+
+.from > input,
+.to > input {
+    width: 162px;
+    height: 16px;
+}
+
+.tasksContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+textarea {
+    max-width: 300px;
+}
