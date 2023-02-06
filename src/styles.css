@@ -94,4 +94,6 @@ input {
 
 textarea {
     max-width: 300px;
+    max-height: 200px;
+    min-height: 50px;
 }
