@@ -97,3 +97,9 @@ textarea {
     max-height: 200px;
     min-height: 50px;
 }
+
+.CV {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
