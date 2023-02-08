@@ -9,6 +9,7 @@ export default function Navbar() {
          
           <Link to ='/CVpdf'>Preview mode</Link>
         </div>
+        
     </nav>
   )
 }
