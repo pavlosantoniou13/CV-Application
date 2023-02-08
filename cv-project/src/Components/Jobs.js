@@ -1,12 +1,18 @@
 import React from 'react'
 
 export default function Jobs(props) {
+
+    const handleSubmit = (e) => {
+        e.preventDefault()
+       
+    }
+
   return (
     <header>
         
         <div className="form">
         <h1>Exprerience</h1>
-            <form>
+            <form onSubmit={handleSubmit} >
                 <div className="upper">
                     <div className="company">
                         <label htmlFor="company">Company Name</label>
@@ -37,9 +43,7 @@ export default function Jobs(props) {
                         onChange={props.handleChange} id="Tasks"/>
                     </div>
                 </div>  
-                <div className="btnContainer">
-                    <button type='submit' className='submitBtn'>Save</button>
-                </div>   
+              
             </form>
         </div>
     </header>

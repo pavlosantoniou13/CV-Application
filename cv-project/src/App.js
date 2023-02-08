@@ -1,11 +1,8 @@
 import Navbar from './Components/Navbar'
-import GeneralInfo from './Components/GeneralInfo'
-import Education from './Components/Education'
-import Jobs from './Components/Jobs'
 import HomePage from './HomePage'
 import './styles.css'
 import CVpdf from './Components/CVpdf'
-import { BrowserRouter , Router, Routes, Route, Link } from "react-router-dom";
+import {  Routes, Route } from "react-router-dom";
 import { useState } from 'react'
 
 function App() {
@@ -13,6 +10,7 @@ function App() {
   const [lastName, setLastName] = useState("")
   const [email, setEmail] = useState("")
   const [phone, setPhone] = useState("")
+  const [about, setAbout] = useState("")
 
   const [school, setSchool] = useState('');
   const [titleOfStudy, settitleOfStudy] = useState("")
@@ -39,8 +37,12 @@ function App() {
     }else if (e.target.id === "phone") {
       setPhone(e.target.value);
 
+    } else if(e.target.id === "about") {
+      setAbout(e.target.value)
     }
     
+  
+
 
     if(e.target.id === "school") {
       setSchool(e.target.value); 
@@ -73,7 +75,7 @@ function App() {
 
     }  
     const person = { name, lastName, email, phone, school, titleOfStudy, fromDate, toDate
-    , company, position, toJobDate, fromJobDate, tasks }
+    , company, position, toJobDate, fromJobDate, tasks, about }
     console.log(person)
   };
 
@@ -82,8 +84,8 @@ function App() {
   <div>
     <Navbar />
     <Routes>
-      <Route path='/' element={<HomePage  handleChange={handleChange} />}/>
-      <Route path='/CVpdf' element={<CVpdf name={name} lastName={lastName} email={email}phone={phone} 
+      <Route path='/' element={<HomePage  handleChange={handleChange}  />}/>
+      <Route path='/CVpdf' element={<CVpdf name={name} lastName={lastName} email={email}phone={phone} about={about} 
        school={school} titleOfStudy={titleOfStudy} fromDate={fromDate} toDate={toDate} 
         company={company} position={position} fromJobDate={fromJobDate} toJobDate={toJobDate} tasks={tasks}  />} /> 
 

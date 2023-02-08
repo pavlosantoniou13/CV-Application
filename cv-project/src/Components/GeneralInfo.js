@@ -1,15 +1,18 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 export default function GeneralInfo(props) {
    
-
+    const handleSubmit = (e) => {
+        e.preventDefault()
+       
+    }
 
   return (
     <header>
         
         <div className="form">
         <h1>General Information</h1>
-            <form >
+            <form  onSubmit={handleSubmit}>
                 <div className="upper">
                     <div className="firstName">
                         <label htmlFor="firstName">First Name</label>
@@ -34,9 +37,12 @@ export default function GeneralInfo(props) {
                         onChange={props.handleChange} id="phone" />
                     </div>
                 </div>  
-                <div className="btnContainer">
-                    <button type='submit' className='submitBtn'>Save</button>
-                </div>   
+                <div className="tasksContainer">
+                    <div className="about">
+                        <textarea type="text" placeholder='Write something about yourself...' 
+                        onChange={props.handleChange} id="about"/>
+                    </div>
+                </div>  
             </form>
         </div>
     </header>
