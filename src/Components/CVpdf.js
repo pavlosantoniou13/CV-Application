@@ -5,31 +5,33 @@ export default function CVpdf(props) {
   return (
     <div className='CV'>
       <div className='leftSection'>
-        <div className="Contact">
-          <p> Name:{props.name} {props.lastName}</p>
-          <ul >
-            <li className='link'>
-              <p>{props.phone}</p>
-            </li>
-            <li className='link'>
-              <p>{props.email}</p>
-            </li>
-          </ul>
+        <h1>{props.name} {props.lastName}</h1>
+        <div className="about">
+          <p>{props.about}</p>
         </div>
 
         <div className="education">
           <h1>Education</h1>
           <ul>
             <li className='link'>
-              <p>{props.school}</p>
+              <h3>{props.school}</h3>
             </li>
             <li className='link'>
-              <p>{props.titleOfStudy}</p>
+              <h3>{props.titleOfStudy}</h3>
             </li>
             <li className='link'>
-              <p>from - to</p>
+              <p>{props.fromDate} - {props.toDate}</p>
             </li>
           </ul>
+        </div>
+        <div className="experience">
+          <h1>Work exprerience</h1>
+          <h3> {props.company} </h3>
+          <h4> {props.position} </h4>
+          <h4> {props.fromJobDate}-{props.toJobDate} </h4>
+          <div className="tasks">
+            <div className="p"> {props.tasks} </div>
+          </div>
         </div>
         
       </div>

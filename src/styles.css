@@ -105,3 +105,13 @@ textarea {
   height: 100%
 }
 
+ul {
+  list-style-type: none;
+}
+
+.leftSection {
+  width: 50%;
+  
+  text-align: center;
+  border: 3px solid black;
+}

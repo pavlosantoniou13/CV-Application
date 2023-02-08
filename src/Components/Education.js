@@ -1,12 +1,21 @@
 import React from 'react'
 
 export default function Education(props) {
+
+    const handleSubmit = (e) => {
+        e.preventDefault()
+       
+    }
+
   return (
+
+
+    
     <header>
         
         <div className="form">
         <h1>Education</h1>
-            <form>
+            <form onSubmit={handleSubmit}>
                 <div className="upper">
                     <div className="schoolName">
                         <label htmlFor="schoolName">School Name</label>
@@ -31,9 +40,7 @@ export default function Education(props) {
                          onChange={props.handleChange} id='toDate'  />
                     </div>
                 </div>  
-                <div className="btnContainer">
-                    <button type='submit' className='submitBtn'>Save</button>
-                </div>   
+                 
             </form>
         </div>
     </header>
