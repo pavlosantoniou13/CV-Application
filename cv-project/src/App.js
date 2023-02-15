@@ -85,8 +85,8 @@ function App() {
     <Navbar />
     <Routes>
       <Route path='/' element={<HomePage  handleChange={handleChange} name={name} lastName={lastName} email={email}phone={phone} about={about} 
-       school={school} titleOfStudy={titleOfStudy} fromDate={fromDate} toDate={toDate} 
-        company={company} position={position} fromJobDate={fromJobDate} toJobDate={toJobDate} tasks={tasks} />}/>
+      school={school} titleOfStudy={titleOfStudy} fromDate={fromDate} toDate={toDate} 
+      company={company} position={position} fromJobDate={fromJobDate} toJobDate={toJobDate} tasks={tasks} />}/>
         
       <Route path='/CVpdf' element={<CVpdf name={name} lastName={lastName} email={email}phone={phone} about={about} 
        school={school} titleOfStudy={titleOfStudy} fromDate={fromDate} toDate={toDate} 
